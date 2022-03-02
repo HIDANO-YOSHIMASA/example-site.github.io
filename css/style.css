@@ -1,0 +1,384 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+    font-family: 'Noto Sans JP', sans-serif;
+    scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+p {
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: #000;
+}
+@media(min-width:768px) {
+    p {
+        line-height: 1.8;
+    }
+}
+
+
+/* ヘッダー */
+header{
+    background-color: rgba(255,255,255,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+.header-container {
+    padding: 20px 4%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo {
+    font-size: 2rem;
+}
+.menu {
+    font-size: 1.8rem;
+    padding: .5rem 1rem;
+}
+#close {
+    display: none;
+}
+.header-nav {
+    width: 0%;
+    height: 100vh;
+    background: #fff;
+    list-style: none;
+    position: absolute;
+    z-index: 2;
+    top: 40px;
+    right: -150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+.header-nav li {
+    text-align: center;
+    margin: 3rem 0;
+}
+.header-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    
+}
+.header-nav a:hover {
+    opacity: .8;
+}
+
+
+/* メイン */
+
+.main-container {
+    padding: 100px 4% 0;
+    margin: 0 auto;
+    
+}
+/* コンテンツ */
+section {
+    margin: 20px 0;
+}
+
+.hero img {
+    width: 30%;
+    align-self: center;
+    justify-self: center;
+}
+.work {
+    position: relative;
+}
+.category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background: #fff;
+    border-radius: 0 0 12px 0;
+}
+.content-body {
+    width: 80%;
+    margin: -80px auto 50px;
+}
+.title {
+    margin: 20px 0 10px;
+}
+.subtitle {
+    margin-top: 20px;
+}
+.profile {
+    text-align: center;
+}
+/* プロフィール */
+.profile {
+    background-color: #eee;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.history {
+    margin-bottom: 50px;
+}
+.profile-body p {
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: left;
+}
+.profile-body span {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.profile-text p{
+    font-size: 1.5rem;
+    margin: 5px 0 20px;
+    text-align: center;
+}
+.profile-text img {
+    width: 50%;
+}
+
+.profile-body span::before,
+.profile-body span::after {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 1px;
+    background-color: #000;
+    margin-left: 5px;
+    margin-bottom: 4px;
+}
+
+/* Other Works */
+.work-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sub-work {
+    width: 48%;
+    position: relative;
+    margin-top: 12px;
+}
+.sub-work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.sub-work span,
+.main-visual span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    border-radius: 0 0 1rem 0;
+}
+.lum-lightbox-inner img {
+    max-width: 120vw !important;
+    max-height: 85vh !important;
+}
+.lum-gallery-button {
+    display: none;
+}
+a.zoom {
+    cursor: zoom-in;
+}
+/* フッター */
+footer {
+    background-color: rgb(19, 19, 19);
+}
+.footer-container {
+    padding: 20px 4%;
+    margin: 0 auto;
+}
+.footer-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-nav li {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgb(65, 65, 65);
+}
+.footer-nav li:last-child {
+    border-bottom: none;
+}
+.footer-nav a{
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.8rem;
+    letter-spacing: 1.5;
+    color: rgb(199, 199, 199);
+}
+.footer-nav a:hover {
+    opacity: .8;
+}
+
+/* デティール */
+.work-desc {
+    margin: 20px;
+}
+.comment-title {
+    font-size: .5rem;
+    letter-spacing: 1.5;
+    background: rgb(24, 24, 24);
+    color: #fff;
+    padding: 5px;
+}
+.work-desc p {
+    font-size: 1.5rem;
+}
+.pc-site,
+.sp-site {
+    position: relative;
+    margin: 12px 0 30px;
+}
+
+/* デスクトップ */
+@media(min-width:768px){
+    /* ヘッダー */
+    .header-container {
+        max-width: 1440px;
+        padding: 20px;
+    }
+    .menu {
+        display: none;
+    }
+    .header-nav {
+        width: 100%;
+        height: auto;
+        position:static;
+        flex-direction: row;
+    }
+    .header-nav li {
+        margin: 20px;
+        
+    }
+
+    /* メイン */
+    .main-container {
+        max-width: 1040px;
+        padding: 120px 20px;
+    }
+
+    /* コンテンツ */
+    section {
+        height: 100vh;
+    }
+    .category {
+        padding: 1rem 3rem;
+        font-size: 1.8rem;
+        font-weight: 900;
+        border-radius: 0 0 20px 0;
+    }
+    .title,
+    .subtitle {
+        padding: 1rem 2rem;
+        margin: 2rem 0;
+    }
+    .title {
+        font-size: 2rem;
+        padding: 0;
+    }
+    .conetnt-body {
+        margin-top: -120px;
+    }
+    .content-text {
+        font-size: 1.4rem;
+        text-align: left;
+    }
+    .sub-work {
+        width: 32%;
+    }
+
+    /* プロフィール */
+    .profile {
+        height: 90vh;
+    }
+    .profile-body {
+        margin: 0 auto;
+    }
+    .profile-body p {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    .profile-text {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* Other Works */
+    .lum-lightbox-inner img {
+        max-width: 30vw !important;
+    }
+
+    /* フッター */
+    .footer-container {
+        max-width: 1200px;
+        padding: 40px 20px 40px;
+    }
+    .footer-nav {
+        flex-direction: row;
+        
+    }
+    .footer-nav li {
+        border: none;
+        width: 70px;
+    }
+    .footer-nav li:first-child {
+        display: none;
+    }
+    .footer-nav a {
+        font-size: 1.2rem;
+    }
+
+
+    /* デティール */
+
+    .comment-title {
+        display: inline-block;
+        width: 15%;
+        padding: 8px 20px 10px 0;
+        background: none;
+        border-bottom: 1px solid #000;
+        color: #000;
+    }
+    .main-visual {
+        display: flex;
+    }
+    .pc-site {
+        margin-right: 20px;
+    }
+}
